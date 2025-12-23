@@ -12,7 +12,7 @@ public class License {
         this.machineCode = machineCode;
     }
     public static License fromString(String str) {
-        String[] parts = str.split("\|");
+        String[] parts = str.split("\\|");
         return new License(parts[0], parts[1], LocalDate.parse(parts[2]), parts[3]);
     }
     public String getMachineCode() { return machineCode; }
